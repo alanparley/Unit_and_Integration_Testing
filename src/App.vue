@@ -34,6 +34,7 @@ export default {
 
   },
   methods: {
+
     numberClick: function (number) {
       if (this.runningTotal === 0 || this.newTotal) {
         this.runningTotal = "";

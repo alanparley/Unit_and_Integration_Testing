@@ -74,9 +74,9 @@ describe('App.vue', () => {
 describe('App.vue', () => {
   it('clears the running total without affecting the calculation', () => {
     const wrapper = shallowMount(App)
-    wrapper.vm.previousTotal = 21
-    wrapper.vm.divide('7');
-    wrapper.vm.operatorClick('=');
+    wrapper.vm.numberClick('4');
+    wrapper.vm.operatorClick('*');
+    wrapper.vm.numberClick('2');
     wrapper.vm.clearClick();
     expect(wrapper.vm.runningTotal).to.equal(0)
   })

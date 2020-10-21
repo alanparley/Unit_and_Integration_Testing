@@ -127,3 +127,17 @@ describe('calculator', () => {
     cy.get('.display').should('contain', '43046721000')
   })
 })
+
+describe('calculator', () => {
+  beforeEach(() => {
+    cy.visit('/')
+  });
+
+  it('should give an error if divided by zero', () => {
+    cy.get('#number9').click();
+    cy.get('#operator_divide').click();
+    cy.get('#number0').click();
+    cy.get('#operator_equals').click();
+    cy.get('.display').should('contain', 'ERROR')
+  })
+})
