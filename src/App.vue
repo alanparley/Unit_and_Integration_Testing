@@ -94,6 +94,7 @@ export default {
     },
     divide(number) {
       this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+      } 
     },
   },
 };
