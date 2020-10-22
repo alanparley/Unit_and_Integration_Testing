@@ -93,6 +93,9 @@ export default {
       this.runningTotal = parseFloat(this.previousTotal) * parseFloat(number);
     },
     divide(number) {
+      if (number === 0) {
+        this.runningTotal = "You can't divide by 0";
+      } else {
       this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
       } 
     },
